@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --font-syne: 'Syne', system-ui, sans-serif;
+  --font-inter: 'Inter', system-ui, sans-serif;
+  --neon: #00FF87;
+  --neon-dim: rgba(0,255,135,0.12);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #080C14;
+  color: #F0F4FF;
+  font-family: var(--font-inter);
+  line-height: 1.6;
+}
+
+::selection {
+  background-color: rgba(0, 255, 135, 0.2);
+  color: #F0F4FF;
+}
+
+::-webkit-scrollbar       { width: 5px; }
+::-webkit-scrollbar-track { background: #0D1117; }
+::-webkit-scrollbar-thumb { background: #1A2540; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #00FF87; }
+
+/* Neon glow utility */
+.neon-text {
+  color: #00FF87;
+  text-shadow: 0 0 20px rgba(0,255,135,0.5), 0 0 60px rgba(0,255,135,0.2);
+}
+
+.neon-border {
+  border-color: #00FF87;
+  box-shadow: 0 0 15px rgba(0,255,135,0.3), inset 0 0 15px rgba(0,255,135,0.05);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #00FF87 0%, #0D72FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
